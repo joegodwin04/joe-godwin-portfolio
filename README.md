@@ -1,16 +1,93 @@
-## Hi there 👋
+# Hi 👋, I'm Joe Godwin
 
-<!--
-**joegodwin04/joegodwin04** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 💻 IT Engineering Student | Full-Stack Web Developer
 
-Here are some ideas to get you started:
+I'm an Information Technology Engineering student passionate about building modern, secure, and scalable web applications.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Currently learning:
+- 🌱 Java
+- 🌱 Data Structures & Algorithms
+- 🌱 Backend Development
+- 🌱 Full-Stack Web Development
+
+---
+
+## 🚀 Featured Project
+
+### TaskFlow Productivity
+
+A premium SaaS productivity platform built using modern web technologies.
+
+### ✨ Features
+
+- 🔐 JWT Authentication
+- 📧 Email OTP Verification
+- 🔑 Password Reset
+- ✅ Task Management
+- 🎯 Goal Tracking
+- 🍅 Pomodoro Timer
+- 📊 Analytics Dashboard
+- 📄 PDF Report Generation
+- 🌙 Dark / Light Theme
+- 📱 Fully Responsive Design
+
+### 🛠 Tech Stack
+
+Frontend:
+- React
+- Vite
+- CSS
+
+Backend:
+- Node.js
+- Express.js
+
+Database:
+- SQLite
+
+Deployment:
+- Vercel
+- Render
+
+---
+
+## 🌐 Live Demo
+
+🔗 https://taskflow-productivity-one.vercel.app
+
+---
+
+## 📂 Project Repository
+
+🔗 https://github.com/joegodwin04/taskflow-productivity
+
+---
+
+## 🛠 Technologies
+
+- Java
+- JavaScript
+- React
+- Node.js
+- Express.js
+- SQLite
+- HTML
+- CSS
+- Git
+- GitHub
+- Vercel
+- Render
+
+---
+
+## 🎯 Goals for 2026
+
+- ✅ Become a Full-Stack Developer
+- 🔄 Master Java
+- 🔄 Learn Data Structures & Algorithms
+- 🔄 Build Enterprise-Level Projects
+- 🔄 Contribute to Open Source
+
+---
+
+⭐ Thanks for visiting my profile!
