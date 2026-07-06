@@ -1,56 +1,97 @@
 # Hi 👋, I'm Joe Godwin
 
-### 💻 Full Stack Web Developer | 🎓 Information Technology Student
+### 💻 Full Stack Web Developer | 🎓 B.E. Information Technology Student
 
-Building modern web applications and continuously learning new technologies to solve real-world problems.
+Building modern web applications and continuously improving my skills in Full Stack Development.
 
 ---
 
 ## 🚀 About Me
 
-* 🎓 B.E. in Information Technology
-* 💻 Full Stack Web Developer
-* 🌱 Currently learning **Java** & **Spring Boot**
-* 🚀 Passionate about Web Development, AI & Productivity Applications
+- 🎓 B.E. Information Technology Student
+- 💻 Passionate Full Stack Web Developer
+- 🌱 Currently learning **Java**, **Spring Boot**, and **Data Structures & Algorithms**
+- 🤝 Open to Internships and Open Source Collaboration
+- 📫 Reach me at: **your-email@gmail.com**
+
+---
+
+## 💼 Featured Project
+
+### 📌 TaskFlow
+
+An AI-powered productivity and task management platform that helps users organize work efficiently.
+
+### ✨ Features
+
+- ✅ User Authentication
+- ✅ Task Management
+- ✅ AI Task Assistant
+- ✅ Analytics Dashboard
+- ✅ PDF Report Generation
+- ✅ Google Maps Integration
+- ✅ Responsive Design
+
+### 🛠️ Built With
+
+- React.js
+- Vite
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+- Google Maps API
+- Gemini AI
+- Tailwind CSS
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Languages**
+### Frontend
 
-* Java • JavaScript • HTML • CSS
+<p>
+<img src="https://skillicons.dev/icons?i=html,css,js,react,vite,tailwind" />
+</p>
 
-**Frontend**
+### Backend
 
-* React • Vite • Tailwind CSS
+<p>
+<img src="https://skillicons.dev/icons?i=nodejs,express,java,spring" />
+</p>
 
-**Backend**
+### Database
 
-* Node.js • Express.js
+<p>
+<img src="https://skillicons.dev/icons?i=mongodb" />
+</p>
 
-**Database**
+### Tools
 
-* PostgreSQL • SQLite
+<p>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm" />
+</p>
 
-**Tools**
+---
 
-* Git • GitHub • VS Code • Postman
+## 📊 GitHub Stats
+
+![](https://github-readme-stats.vercel.app/api?username=joegodwin04&show_icons=true&theme=tokyonight)
+
+![](https://github-readme-streak-stats.herokuapp.com/?user=joegodwin04&theme=tokyonight)
+
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=joegodwin04&layout=compact&theme=tokyonight)
 
 ---
 
-## 🌟 Featured Project
+## 🌐 Connect With Me
 
-### 🚀 TaskFlow
-
-A full-stack productivity platform for managing tasks, tracking progress, and improving daily workflow.
-
-**Key Features**
-
-* 🔐 Secure Authentication
-* ✅ Task Management
-* 📊 Analytics Dashboard
-* 📄 PDF Report Generation
-* 🌙 Responsive UI
+<p>
+<a href="https://github.com/joegodwin04">GitHub</a> •
+<a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a> •
+<a href="mailto:your-email@gmail.com">Email</a>
+</p>
 
 ---
+
+⭐ Thanks for visiting my profile!
