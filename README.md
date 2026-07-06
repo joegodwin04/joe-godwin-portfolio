@@ -76,14 +76,8 @@ An AI-powered productivity and task management platform that helps users organiz
 
 ## 📊 GitHub Stats
 
-![](https://github-readme-stats.vercel.app/api?username=joegodwin04&show_icons=true&theme=tokyonight)
-
-![](https://github-readme-streak-stats.herokuapp.com/?user=joegodwin04&theme=tokyonight)
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=joegodwin04&layout=compact&theme=tokyonight)
-
----
-
+## GitHub Stats
+...
 ## 🌐 Connect With Me
 
 <p>
