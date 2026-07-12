@@ -1,91 +1,129 @@
-# Hi 👋, I'm Joe Godwin
+<h1 align="center">Hi 👋, I'm Joe Godwin</h1>
 
-### 💻 Full Stack Web Developer | 🎓 B.E. Information Technology Student
+<h3 align="center">
+Full Stack Developer • Information Technology Student • Passionate Problem Solver
+</h3>
 
-Building modern web applications and continuously improving my skills in Full Stack Development.
+<p align="center">
+Building scalable full-stack applications with modern technologies while continuously learning and improving.
+</p>
 
 ---
 
-## 🚀 About Me
+# 👨‍💻 About Me
 
 - 🎓 B.E. Information Technology Student
-- 💻 Passionate Full Stack Web Developer
-- 🌱 Currently learning **Java**, **Spring Boot**, and **Data Structures & Algorithms**
-- 🤝 Open to Internships and Open Source Collaboration
-- 📫 Reach me at: **your-email@gmail.com**
+- 💻 Passionate about Full Stack Web Development
+- 🌱 Currently learning **Java**, **Spring Boot**, **DSA**, and **System Design**
+- 🚀 Building real-world production-ready web applications
+- 🤝 Open to Internship & Collaboration Opportunities
+- ⚡ Interested in Backend Development, Web Technologies & Software Engineering
 
 ---
 
-## 💼 Featured Project
+# 🚀 Featured Project
 
-### 📌 TaskFlow
+## 📌 TaskFlow – Smart Productivity Platform
 
-An AI-powered productivity and task management platform that helps users organize work efficiently.
+A modern full-stack productivity platform designed to help users organize their daily workflow efficiently.
 
 ### ✨ Features
 
-- ✅ User Authentication
+- 🔐 Secure JWT Authentication
 - ✅ Task Management
-- ✅ AI Task Assistant
-- ✅ Analytics Dashboard
-- ✅ PDF Report Generation
-- ✅ Google Maps Integration
-- ✅ Responsive Design
-
-### 🛠️ Built With
-
-- React.js
-- Vite
-- Node.js
-- Express.js
-- MongoDB
-- JWT Authentication
-- Google Maps API
-- Gemini AI
-- Tailwind CSS
+- 🎯 Goal Tracking
+- 🔥 Habit Tracker
+- 🍅 Pomodoro Timer
+- 📅 Daily Routines
+- 📊 Productivity Analytics
+- 📄 PDF Report Generation
+- 📱 Fully Responsive Design
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### Frontend
+## Frontend
 
 <p>
 <img src="https://skillicons.dev/icons?i=html,css,js,react,vite,tailwind" />
 </p>
 
-### Backend
+## Backend
 
 <p>
 <img src="https://skillicons.dev/icons?i=nodejs,express,java,spring" />
 </p>
 
-### Database
+## Database
 
 <p>
-<img src="https://skillicons.dev/icons?i=mongodb" />
+<img src="https://skillicons.dev/icons?i=postgres" />
 </p>
 
-### Tools
+## Tools & Platforms
 
 <p>
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm" />
-</p>
-
----
-
-## 📊 GitHub Stats
-
-## GitHub Stats
-...
-## 🌐 Connect With Me
-
-<p>
-<a href="https://github.com/joegodwin04">GitHub</a> •
-<a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a> •
-<a href="mailto:your-email@gmail.com">Email</a>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm,vercel,render" />
 </p>
 
 ---
 
-⭐ Thanks for visiting my profile!
+# 📈 Currently Learning
+
+- ☕ Java
+- 🌱 Spring Boot
+- 📚 Data Structures & Algorithms
+- 🗄️ SQL & Database Design
+- 🏗️ REST API Development
+- ⚙️ Backend Architecture
+
+---
+
+# 📊 GitHub Stats
+
+<p align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=joegodwin04&show_icons=true&theme=tokyonight&hide_border=true"/>
+
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joegodwin04&layout=compact&theme=tokyonight&hide_border=true"/>
+
+</p>
+
+<p align="center">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=joegodwin04&theme=tokyonight&hide_border=true"/>
+
+</p>
+
+---
+
+# 🌐 Connect With Me
+
+<p align="left">
+
+<a href="https://github.com/joegodwin04">
+<img src="https://skillicons.dev/icons?i=github" />
+</a>
+
+<a href="YOUR_LINKEDIN_URL">
+<img src="https://skillicons.dev/icons?i=linkedin" />
+</a>
+
+<a href="mailto:YOUR_EMAIL@gmail.com">
+<img src="https://skillicons.dev/icons?i=gmail" />
+</a>
+
+</p>
+
+---
+
+# 💡 Quote
+
+> *"Consistency beats intensity. Every project is one step closer to mastery."*
+
+---
+
+<p align="center">
+⭐ Thanks for visiting my profile! Feel free to explore my repositories and connect with me.
+</p>
