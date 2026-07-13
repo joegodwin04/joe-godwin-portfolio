@@ -98,25 +98,13 @@ A modern full-stack productivity platform designed to help users organize their 
 
 ---
 
-# 🌐 Connect With Me
+## 🌐 Connect With Me
 
-<p align="left">
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/joegodwin04)
 
-<a href="https://github.com/joegodwin04">
-<img src="https://skillicons.dev/icons?i=github" />
-</a>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](YOUR_LINKEDIN_URL)
 
-<a href="YOUR_LINKEDIN_URL">
-<img src="https://skillicons.dev/icons?i=linkedin" />
-</a>
-
-<a href="mailto:YOUR_EMAIL@gmail.com">
-<img src="https://skillicons.dev/icons?i=gmail" />
-</a>
-
-</p>
-
----
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail)](mailto:godwinje87@gmail.com)
 
 # 💡 Quote
 
