@@ -135,15 +135,13 @@ A realtime conversational voice assistant. Speech flows through voice activity d
 
 <div align="center">
 
-🔥 **[Check out my pinned repositories and commit history →](https://github.com/joegodwin04)**
+**Building consistently. Learning continuously. Shipping real projects.**
+
+<a href="https://github.com/joegodwin04">
+  <img src="https://img.shields.io/badge/View_GitHub_Activity-181717?style=for-the-badge&logo=github&logoColor=white" alt="View GitHub Activity" />
+</a>
 
 </div>
-
-<br>
-
-## Connect With Me
-
-<div align="center">
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:godwinje87@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joe-godwin-869858275/)
