@@ -120,16 +120,34 @@ A realtime conversational voice assistant. Speech flows through voice activity d
 
 ## Currently Learning
 
-`Java` · `Spring Boot` · `Data Structures & Algorithms` · `System Design`
+<div align="center">
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![DSA](https://img.shields.io/badge/Data_Structures_%26_Algorithms-3776AB?style=for-the-badge&logo=leetcode&logoColor=white)
+![System Design](https://img.shields.io/badge/System_Design-4B32C3?style=for-the-badge&logo=azurepipelines&logoColor=white)
+
+</div>
 
 <br>
 
 ## GitHub Activity
 
-Actively building — the projects above are the best signal of what I'm working on right now. Check the pinned repositories for the latest.
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=joegodwin04&show_icons=true&theme=default&hide_border=true&hide_title=true" width="49%" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=joegodwin04&layout=compact&theme=default&hide_border=true&hide_title=true" width="42%" />
+
+</div>
 
 <br>
 
 ## Connect With Me
 
-📧 [Email](mailto:godwinje87@gmail.com) &nbsp;·&nbsp; 💼 [LinkedIn](https://www.linkedin.com/in/joe-godwin-869858275/) &nbsp;·&nbsp; 💻 [GitHub](https://github.com/joegodwin04)
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:godwinje87@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joe-godwin-869858275/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/joegodwin04)
+
+</div>
