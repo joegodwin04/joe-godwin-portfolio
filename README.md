@@ -135,9 +135,7 @@ A realtime conversational voice assistant. Speech flows through voice activity d
 
 <div align="center">
 
-**[📈 View my contribution graph on GitHub →](https://github.com/joegodwin04)**
-
-I keep active development on the projects above — TaskFlow's main branch has 30+ commits, SpeakGuru's has close to that, and both keep getting updated as I add features and fix things. My contribution graph and full commit history are visible directly on my profile.
+🔥 **[Check out my pinned repositories and commit history →](https://github.com/joegodwin04)**
 
 </div>
 
