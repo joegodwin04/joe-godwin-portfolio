@@ -1,117 +1,76 @@
-<h1 align="center">Hi 👋, I'm Joe Godwin</h1>
+<div align="center">
 
-<h3 align="center">
-Full Stack Developer • Information Technology Student • Passionate Problem Solver
-</h3>
+# Joe Godwin
 
-<p align="center">
-Building scalable full-stack applications with modern technologies while continuously learning and improving.
-</p>
+**Information Technology Student · Full-Stack Developer**
 
----
+Mumbai, India · Building full-stack apps and AI-powered systems, and looking for a Software Developer / Full-Stack Developer internship.
 
-# 👨‍💻 About Me
+</div>
 
-- 🎓 B.E. Information Technology Student
-- 💻 Passionate about Full Stack Web Development
-- 🌱 Currently learning **Java**, **Spring Boot**, **DSA**, and **System Design**
-- 🚀 Building real-world production-ready web applications
-- 🤝 Open to Internship & Collaboration Opportunities
-- ⚡ Interested in Backend Development, Web Technologies & Software Engineering
+<br>
 
----
+## What I Work On
 
-# 🚀 Featured Project
+- **Full-stack web apps** — React + Node/Express, secure authentication, production databases, and deployed applications.
+- **AI-integrated systems** — LLMs used as an actual part of the product, not a bolt-on demo.
+- **Realtime systems** — building low-latency audio and conversational AI pipelines.
 
-## 📌 TaskFlow – Smart Productivity Platform
+<br>
 
-A modern full-stack productivity platform designed to help users organize their daily workflow efficiently.
+## Selected Projects
 
-### ✨ Features
+<br>
 
-- 🔐 Secure JWT Authentication
-- ✅ Task Management
-- 🎯 Goal Tracking
-- 🔥 Habit Tracker
-- 🍅 Pomodoro Timer
-- 📅 Daily Routines
-- 📊 Productivity Analytics
-- 📄 PDF Report Generation
-- 📱 Fully Responsive Design
+### 🚀 TaskFlow — Personal Project
 
----
+A full-stack productivity platform — tasks, goals, habits, routines, Pomodoro sessions and analytics under one account, with secure authentication and a production PostgreSQL database.
 
-# 🛠️ Tech Stack
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
 
-## Frontend
+**[🔗 Live Demo](https://taskflow-productivity-one.vercel.app)** &nbsp;·&nbsp; **[📦 Repository](https://github.com/joegodwin04/taskflow-productivity)**
 
-<p>
-<img src="https://skillicons.dev/icons?i=html,css,js,react,vite,tailwind" />
-</p>
+<br>
 
-## Backend
+### CivicSense-AI — Hackathon Project
 
-<p>
-<img src="https://skillicons.dev/icons?i=nodejs,express,java,spring" />
-</p>
+AI-powered civic decision-support platform for Members of Parliament. Citizen reports submitted as text, voice or image are interpreted using Google Gemini, then evaluated with geospatial analysis to identify and prioritize the issues that need attention first.
 
-## Database
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat-square&logo=googlegemini&logoColor=white)
 
-<p>
-<img src="https://skillicons.dev/icons?i=postgres" />
-</p>
+**[🔗 Live Demo](https://civic-sense-ai-roan.vercel.app/)** &nbsp;·&nbsp; **[📦 Repository](https://github.com/joegodwin04/CivicSense-AI)**
 
-## Tools & Platforms
+<br>
 
-<p>
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm,vercel,render" />
-</p>
+### SpeakGuru — Realtime Voice AI · In Development
 
----
+A realtime voice assistant built to hold an actual conversation — speech in, LLM reasoning, speech out, with turn-detection deciding when someone's actually done talking. Core pipeline works; latency and turn-taking are still being tuned.
 
-# 📈 Currently Learning
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![LiveKit](https://img.shields.io/badge/LiveKit-000000?style=flat-square&logo=livekit&logoColor=white) ![Groq](https://img.shields.io/badge/Groq-F55036?style=flat-square) ![Deepgram](https://img.shields.io/badge/Deepgram-13EF93?style=flat-square)
 
-- ☕ Java
-- 🌱 Spring Boot
-- 📚 Data Structures & Algorithms
-- 🗄️ SQL & Database Design
-- 🏗️ REST API Development
-- ⚙️ Backend Architecture
+**[📦 Repository](https://github.com/joegodwin04/speakguru-ai)**
 
----
+<br>
 
-# 📊 GitHub Stats
+## Technical Skills
 
-<p align="center">
+| | |
+|---|---|
+| **Languages** | JavaScript (ES6+) · Python · SQL · HTML · CSS |
+| **Frontend** | React · Vite · React Router · Tailwind CSS |
+| **Backend** | Node.js · Express · REST APIs · JWT · bcrypt |
+| **Databases** | PostgreSQL (Neon) · MongoDB Atlas · SQLite · Sequelize |
+| **AI / Realtime** | Google Gemini · Groq · LiveKit · Deepgram |
+| **Tools** | Git · GitHub · Vercel · Render · Postman · VS Code |
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=joegodwin04&show_icons=true&theme=tokyonight&hide_border=true"/>
+<br>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joegodwin04&layout=compact&theme=tokyonight&hide_border=true"/>
+## Currently Learning
 
-</p>
+Java · Spring Boot · Data Structures & Algorithms · System Design
 
-<p align="center">
+<br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=joegodwin04&theme=tokyonight&hide_border=true"/>
+## Contact
 
-</p>
-
----
-
-## 🌐 Connect With Me
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/joegodwin04)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](YOUR_LINKEDIN_URL)
-
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail)](mailto:godwinje87@gmail.com)
-
-# 💡 Quote
-
-> *"Consistency beats intensity. Every project is one step closer to mastery."*
-
----
-
-<p align="center">
-⭐ Thanks for visiting my profile! Feel free to explore my repositories and connect with me.
-</p>
+📧 [Email](mailto:godwinje87@gmail.com)  ·  💼 [LinkedIn](https://www.linkedin.com/in/joe-godwin-869858275/)  ·  💻 [GitHub](https://github.com/joegodwin04)
