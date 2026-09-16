@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, ExternalLink, FileText } from 'lucide-react';
-import { GithubIcon } from '../components/Icons';
+import { GithubIcon, LinkedinIcon } from '../components/Icons';
 import { personal } from '../data/portfolioData';
 
 // ── System Architecture Visual ─────────────────────────────────
@@ -340,11 +340,12 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className="mt-6 md:mt-10"
+              className="mt-10 md:mt-14"
               style={{
                 display: 'flex',
                 gap: '1rem',
                 alignItems: 'center',
+                flexWrap: 'wrap',
               }}
             >
               <a
@@ -369,6 +370,30 @@ export default function HeroSection() {
               >
                 <GithubIcon size={14} />
                 GITHUB
+              </a>
+              <span style={{ color: 'var(--color-border)', fontSize: '0.6rem' }}>|</span>
+              <a
+                href="https://www.linkedin.com/in/joe-godwin-869858275/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  color: 'var(--color-text-tertiary)',
+                  textDecoration: 'none',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.65rem',
+                  letterSpacing: '0.08em',
+                  transition: 'color 0.2s',
+                }}
+                className="hover:text-accent"
+                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-tertiary)'}
+                aria-label="LinkedIn profile"
+              >
+                <LinkedinIcon size={14} />
+                LINKEDIN
               </a>
               <span style={{ color: 'var(--color-border)', fontSize: '0.6rem' }}>|</span>
               <span

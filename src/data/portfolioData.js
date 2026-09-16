@@ -259,7 +259,7 @@ export const education = [
   },
   {
     id: "ssc",
-    degree: "SSC",
+    degree: "Higher Secondary Certificate",
     institution: "St. Joseph's High School, Wadala",
     location: "Mumbai, India",
     period: "Completed 2022",

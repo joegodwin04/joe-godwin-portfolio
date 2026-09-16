@@ -283,31 +283,6 @@ function VoltageDetectorCard({ project }) {
               {project.name}
             </h3>
 
-            {/* Image Gallery */}
-            {project.images && (
-              <div className="flex flex-col gap-4 mb-6">
-                {project.images.map((img, idx) => (
-                  <div 
-                    key={idx} 
-                    className="w-full overflow-hidden rounded border border-[#00ff9f]/20 bg-[#00ff9f]/5 cursor-pointer relative group"
-                    onClick={() => window.open(img, '_blank')}
-                    title="Click to view full size"
-                  >
-                    <img
-                      src={img}
-                      alt={`${project.name} Photo ${idx + 1}`}
-                      className="w-full h-48 md:h-72 object-contain transition-transform duration-500 group-hover:scale-105 p-2"
-                      style={{ display: 'block' }}
-                    />
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
-                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-1.5 rounded pointer-events-none border border-[#00ff9f]/30">
-                      <span className="text-[#00ff9f] text-[0.6rem] font-mono tracking-widest">VIEW</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
             {/* Tagline / Description */}
             <p
               style={{
@@ -322,7 +297,7 @@ function VoltageDetectorCard({ project }) {
             </p>
 
             {/* Skills Pills */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '0.75rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1.25rem' }}>
               {project.skills.map((skill) => (
                 <span
                   key={skill}
@@ -341,6 +316,31 @@ function VoltageDetectorCard({ project }) {
                 </span>
               ))}
             </div>
+
+            {/* Image Gallery */}
+            {project.images && (
+              <div className="flex flex-col gap-4 mb-4">
+                {project.images.map((img, idx) => (
+                  <div 
+                    key={idx} 
+                    className="w-full overflow-hidden rounded-md border border-[#00ff9f]/20 bg-[#00ff9f]/5 cursor-pointer relative group shadow-lg"
+                    onClick={() => window.open(img, '_blank')}
+                    title="Click to view full size"
+                  >
+                    <img
+                      src={img}
+                      alt={`${project.name} Photo ${idx + 1}`}
+                      className="w-full h-48 md:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ display: 'block' }}
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
+                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-1.5 rounded pointer-events-none border border-[#00ff9f]/30">
+                      <span className="text-[#00ff9f] text-[0.6rem] font-mono tracking-widest">VIEW</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Action Bar / Toggle hint */}
             <div
@@ -711,40 +711,59 @@ export default function ElectronicsSection() {
                       {electronicsProject.name}
                     </h3>
 
-                    {/* Image Gallery */}
-                    {electronicsProject.images && (
-                      <div className="flex flex-col md:flex-row gap-4 mb-6">
-                        {electronicsProject.images.map((img, idx) => (
-                          <div 
-                            key={idx} 
-                            className="flex-1 overflow-hidden rounded border border-[#f97316]/20 bg-[#f97316]/5 cursor-pointer relative group"
-                            onClick={() => window.open(img, '_blank')}
-                            title="Click to view full size"
-                          >
-                            <img
-                              src={img}
-                              alt={`${electronicsProject.name} Photo ${idx + 1}`}
-                              className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-                              style={{ display: 'block' }}
-                            />
-                            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
-                            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-1.5 rounded pointer-events-none border border-[#f97316]/30">
-                              <span className="text-[#f97316] text-[0.6rem] font-mono tracking-widest">VIEW</span>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
                     <p
                       style={{
-                        fontSize: '0.9rem',
+                        fontSize: '1rem',
                         color: 'var(--color-text-secondary)',
                         lineHeight: 1.7,
-                        maxWidth: '560px',
+                        marginBottom: '2rem',
                       }}
                     >
                       {electronicsProject.description}
                     </p>
+
+                    {/* Image Gallery */}
+                    {electronicsProject.images && (
+                      <div className="flex flex-col gap-6 mb-2">
+                        {/* Primary Image */}
+                        <div 
+                          className="w-full overflow-hidden rounded-md border border-[#f97316]/20 bg-[#f97316]/5 cursor-pointer relative group shadow-lg"
+                          onClick={() => window.open(electronicsProject.images[0], '_blank')}
+                          title="Click to view full size"
+                        >
+                          <img
+                            src={electronicsProject.images[0]}
+                            alt={`${electronicsProject.name} Primary View`}
+                            className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            style={{ display: 'block', maxHeight: '420px' }}
+                          />
+                          <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
+                          <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-2 rounded pointer-events-none border border-[#f97316]/30">
+                            <span className="text-[#f97316] text-xs font-mono tracking-widest">VIEW</span>
+                          </div>
+                        </div>
+
+                        {/* Secondary Image */}
+                        {electronicsProject.images.length > 1 && (
+                          <div 
+                            className="w-full md:w-3/4 overflow-hidden rounded-md border border-[#f97316]/20 bg-[#f97316]/5 cursor-pointer relative group shadow-lg"
+                            onClick={() => window.open(electronicsProject.images[1], '_blank')}
+                            title="Click to view full size"
+                          >
+                            <img
+                              src={electronicsProject.images[1]}
+                              alt={`${electronicsProject.name} Secondary View`}
+                              className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                              style={{ display: 'block', maxHeight: '320px' }}
+                            />
+                            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
+                            <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-2 rounded pointer-events-none border border-[#f97316]/30">
+                              <span className="text-[#f97316] text-xs font-mono tracking-widest">VIEW</span>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

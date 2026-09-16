@@ -20,7 +20,7 @@ export default function EducationSection() {
             const accentRgb = isActive ? '0,255,159' : '249,115,22';
 
             return (
-              <FadeIn key={edu.id} delay={i * 0.12}>
+              <FadeIn key={edu.id} delay={i * 0.12} style={{ height: '100%' }}>
                 <motion.div
                   whileHover={{ y: -3 }}
                   style={{
@@ -29,6 +29,9 @@ export default function EducationSection() {
                     background: 'rgba(17,17,22,0.7)',
                     overflow: 'hidden',
                     position: 'relative',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
                   }}
                 >
                   {/* Top accent bar */}
@@ -40,7 +43,7 @@ export default function EducationSection() {
                     aria-hidden="true"
                   />
 
-                  <div style={{ padding: '1.5rem' }}>
+                  <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                     {/* Status */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                       {isActive && (
@@ -94,6 +97,7 @@ export default function EducationSection() {
                             color: 'var(--color-text-primary)',
                             marginBottom: '0.5rem',
                             lineHeight: 1.2,
+                            textWrap: 'balance',
                           }}
                         >
                           {edu.degree}
@@ -178,7 +182,7 @@ export default function EducationSection() {
                         fontSize: '0.85rem',
                         color: 'var(--color-text-tertiary)',
                         lineHeight: 1.7,
-                        marginBottom: '1.25rem',
+                        marginBottom: edu.highlights && edu.highlights.length > 0 ? '1.25rem' : '0',
                       }}
                     >
                       {edu.description}
@@ -186,7 +190,7 @@ export default function EducationSection() {
 
                     {/* Highlights */}
                     {edu.highlights && edu.highlights.length > 0 && (
-                      <div>
+                      <div style={{ marginTop: 'auto' }}>
                         <p
                           style={{
                             fontFamily: 'var(--font-mono)',
