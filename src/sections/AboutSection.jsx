@@ -36,9 +36,9 @@ export default function AboutSection() {
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr',
-            gap: '3rem',
+            alignItems: 'flex-start',
           }}
-          className="about-grid"
+          className="about-grid gap-8 md:gap-12"
         >
           {/* Left: Story */}
           <div>
@@ -105,7 +105,7 @@ export default function AboutSection() {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))',
                   gap: '1rem',
                 }}
               >
@@ -153,11 +153,11 @@ export default function AboutSection() {
           {/* Right: Transition Diagram */}
           <FadeIn delay={0.15} direction="right">
             <div
+              className="p-5 md:p-6"
               style={{
                 border: '1px solid var(--color-border)',
                 borderRadius: '4px',
-                background: 'rgba(7,7,9,0.6)',
-                padding: '1.5rem',
+                background: 'rgba(7,7,9,0.5)',
               }}
             >
               <p

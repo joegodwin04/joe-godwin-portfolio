@@ -88,14 +88,13 @@ export default function ContactSection() {
         </FadeIn>
 
         <div
+          className="contact-grid gap-6 md:gap-10"
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr',
-            gap: '2.5rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
             maxWidth: '900px',
             margin: '0 auto',
           }}
-          className="contact-grid"
         >
           {/* Contact Links */}
           <FadeIn delay={0.15}>
@@ -109,11 +108,10 @@ export default function ContactSection() {
                   rel="noopener noreferrer"
                   whileHover={{ x: 4 }}
                   transition={{ duration: 0.2 }}
+                  className="gap-3 p-4 md:gap-4 md:px-5 md:py-[1.1rem]"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '1rem',
-                    padding: '1.1rem 1.25rem',
                     border: '1px solid var(--color-border)',
                     borderRadius: '3px',
                     background: 'rgba(17,17,22,0.6)',
@@ -186,11 +184,11 @@ export default function ContactSection() {
           <FadeIn delay={0.2}>
             <form
               onSubmit={handleSubmit}
+              className="p-5 md:p-7"
               style={{
                 border: '1px solid var(--color-border)',
                 borderRadius: '4px',
                 background: 'rgba(17,17,22,0.6)',
-                padding: '1.75rem',
               }}
               noValidate
             >

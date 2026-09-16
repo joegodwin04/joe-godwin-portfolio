@@ -8,10 +8,12 @@ import ElectronicsSection from './sections/ElectronicsSection';
 import JourneySection from './sections/JourneySection';
 import EducationSection from './sections/EducationSection';
 import ContactSection from './sections/ContactSection';
+import VantaBackground from './components/VantaBackground';
 
 export default function App() {
   return (
     <>
+      <VantaBackground />
       <a
         href="#main-content"
         style={{
@@ -47,7 +49,7 @@ export default function App() {
 
       <Navigation />
 
-      <main id="main-content">
+      <main id="main-content" style={{ position: 'relative', zIndex: 1 }}>
         <HeroSection />
         <AboutSection />
         <SkillsSection />

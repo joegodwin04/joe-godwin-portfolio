@@ -32,10 +32,10 @@ export default function JourneySection() {
         {/* Legend */}
         <FadeIn delay={0.05}>
           <div
+            className="mb-8 md:mb-12"
             style={{
               display: 'flex',
               gap: '1.5rem',
-              marginBottom: '3rem',
               flexWrap: 'wrap',
             }}
           >
@@ -137,9 +137,9 @@ export default function JourneySection() {
                     <motion.div
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}
+                      className="px-4 py-4 md:px-5 md:py-4"
                       style={{
                         flex: 1,
-                        padding: '1.1rem 1.25rem',
                         border: `1px solid ${color}25`,
                         borderRadius: '3px',
                         background: `rgba(${hexToRgb(color)},0.03)`,
@@ -210,9 +210,8 @@ export default function JourneySection() {
         {/* Current status */}
         <FadeIn delay={0.5}>
           <div
+            className="mt-6 p-4 md:mt-10 md:px-6 md:py-5"
             style={{
-              marginTop: '2.5rem',
-              padding: '1.25rem 1.5rem',
               border: '1px solid rgba(0,255,159,0.25)',
               borderRadius: '3px',
               background: 'rgba(0,255,159,0.04)',

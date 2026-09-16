@@ -51,17 +51,16 @@ function HardwareSoftwareFlow() {
 
   return (
     <div
+      className="p-5 md:p-8 mb-8 md:mb-12"
       style={{
         display: 'flex',
         alignItems: 'center',
         gap: '1.5rem',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        padding: '2rem',
         border: '1px solid var(--color-border)',
         borderRadius: '4px',
         background: 'rgba(7,7,9,0.5)',
-        marginBottom: '3rem',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -275,15 +274,39 @@ function VoltageDetectorCard({ project }) {
             <h3
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)',
-                fontWeight: 700,
+                fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+                fontWeight: 800,
                 color: 'var(--color-text-primary)',
-                marginBottom: '0.45rem',
-                letterSpacing: '-0.01em',
+                marginBottom: '1.25rem',
               }}
             >
               {project.name}
             </h3>
+
+            {/* Image Gallery */}
+            {project.images && (
+              <div className="flex flex-col gap-4 mb-6">
+                {project.images.map((img, idx) => (
+                  <div 
+                    key={idx} 
+                    className="w-full overflow-hidden rounded border border-[#00ff9f]/20 bg-[#00ff9f]/5 cursor-pointer relative group"
+                    onClick={() => window.open(img, '_blank')}
+                    title="Click to view full size"
+                  >
+                    <img
+                      src={img}
+                      alt={`${project.name} Photo ${idx + 1}`}
+                      className="w-full h-48 md:h-72 object-contain transition-transform duration-500 group-hover:scale-105 p-2"
+                      style={{ display: 'block' }}
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
+                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-1.5 rounded pointer-events-none border border-[#00ff9f]/30">
+                      <span className="text-[#00ff9f] text-[0.6rem] font-mono tracking-widest">VIEW</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Tagline / Description */}
             <p
@@ -335,63 +358,6 @@ function VoltageDetectorCard({ project }) {
               <span>{isOpen ? 'HIDE CASE STUDY' : 'VIEW CASE STUDY & DETAILS'}</span>
               {isOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
             </div>
-          </div>
-
-          {/* Compact Sensor / Voltage SVG Graphic */}
-          <div
-            style={{
-              width: '90px',
-              height: '80px',
-              border: '1px solid rgba(0,255,159,0.2)',
-              borderRadius: '3px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'rgba(0,255,159,0.03)',
-              flexShrink: 0,
-            }}
-            aria-hidden="true"
-          >
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-              {/* Sensing Probe */}
-              <line x1="28" y1="36" x2="28" y2="48" stroke="#00ff9f" strokeWidth="1.5" strokeLinecap="round" />
-              <circle cx="28" cy="48" r="2.5" fill="#00ff9f" />
-              {/* Detector Tip Node */}
-              <circle cx="28" cy="34" r="3" stroke="#00ff9f" strokeWidth="1.2" fill="rgba(0,255,159,0.2)" />
-              {/* Radiating AC Field / Non-Contact Waves */}
-              <path
-                d="M18 26 C22 22, 34 22, 38 26"
-                stroke="#00ff9f"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-                strokeDasharray="2 2"
-                opacity="0.9"
-              />
-              <path
-                d="M13 20 C19 14, 37 14, 43 20"
-                stroke="#00ff9f"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-                strokeDasharray="2 2"
-                opacity="0.6"
-              />
-              <path
-                d="M8 14 C16 6, 40 6, 48 14"
-                stroke="#00ff9f"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeDasharray="2 2"
-                opacity="0.35"
-              />
-              {/* AC symbol */}
-              <path
-                d="M24 10 C25 8, 27 8, 28 10 C29 12, 31 12, 32 10"
-                stroke="#00ff9f"
-                strokeWidth="1"
-                strokeLinecap="round"
-                opacity="0.75"
-              />
-            </svg>
           </div>
         </div>
       </div>
@@ -454,7 +420,7 @@ function VoltageDetectorCard({ project }) {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
                   gap: '1.25rem',
                   marginBottom: '1.5rem',
                 }}
@@ -657,9 +623,11 @@ export default function ElectronicsSection() {
           </div>
         </FadeIn>
 
-        {/* Solar Grass Cutter — Featured Project */}
-        <FadeIn delay={0.2}>
-          <div style={{ marginBottom: '3rem' }}>
+        {/* Projects Grid Container */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mb-12 items-start">
+          
+          {/* Solar Grass Cutter — Featured Project */}
+          <FadeIn delay={0.2} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             <div
               style={{
                 display: 'flex',
@@ -684,8 +652,8 @@ export default function ElectronicsSection() {
             >
               {/* Project Header */}
               <div
+                className="px-5 py-6 md:px-7 md:py-6"
                 style={{
-                  padding: '1.75rem',
                   borderBottom: '1px solid var(--color-border)',
                   background: 'rgba(249,115,22,0.03)',
                 }}
@@ -737,11 +705,36 @@ export default function ElectronicsSection() {
                         fontSize: 'clamp(1.4rem, 3vw, 2rem)',
                         fontWeight: 800,
                         color: 'var(--color-text-primary)',
-                        marginBottom: '0.5rem',
+                        marginBottom: '1.25rem',
                       }}
                     >
                       {electronicsProject.name}
                     </h3>
+
+                    {/* Image Gallery */}
+                    {electronicsProject.images && (
+                      <div className="flex flex-col md:flex-row gap-4 mb-6">
+                        {electronicsProject.images.map((img, idx) => (
+                          <div 
+                            key={idx} 
+                            className="flex-1 overflow-hidden rounded border border-[#f97316]/20 bg-[#f97316]/5 cursor-pointer relative group"
+                            onClick={() => window.open(img, '_blank')}
+                            title="Click to view full size"
+                          >
+                            <img
+                              src={img}
+                              alt={`${electronicsProject.name} Photo ${idx + 1}`}
+                              className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                              style={{ display: 'block' }}
+                            />
+                            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
+                            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-1.5 rounded pointer-events-none border border-[#f97316]/30">
+                              <span className="text-[#f97316] text-[0.6rem] font-mono tracking-widest">VIEW</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                     <p
                       style={{
                         fontSize: '0.9rem',
@@ -753,35 +746,6 @@ export default function ElectronicsSection() {
                       {electronicsProject.description}
                     </p>
                   </div>
-
-                  {/* Solar panel icon */}
-                  <div
-                    style={{
-                      width: '100px',
-                      height: '80px',
-                      border: '1px solid rgba(249,115,22,0.2)',
-                      borderRadius: '3px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
-                    }}
-                    aria-hidden="true"
-                  >
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                      {/* Solar panel */}
-                      <rect x="5" y="5" width="40" height="28" rx="2" stroke="#f97316" strokeWidth="1" strokeOpacity="0.6" />
-                      <line x1="5" y1="14.3" x2="45" y2="14.3" stroke="#f97316" strokeWidth="0.5" strokeOpacity="0.4" />
-                      <line x1="5" y1="23.6" x2="45" y2="23.6" stroke="#f97316" strokeWidth="0.5" strokeOpacity="0.4" />
-                      <line x1="18.3" y1="5" x2="18.3" y2="33" stroke="#f97316" strokeWidth="0.5" strokeOpacity="0.4" />
-                      <line x1="31.6" y1="5" x2="31.6" y2="33" stroke="#f97316" strokeWidth="0.5" strokeOpacity="0.4" />
-                      {/* Motor */}
-                      <circle cx="25" cy="43" r="5" stroke="#f97316" strokeWidth="1" strokeOpacity="0.5" />
-                      <circle cx="25" cy="43" r="2" fill="#f97316" fillOpacity="0.4" />
-                      {/* Wire */}
-                      <line x1="25" y1="33" x2="25" y2="38" stroke="#f97316" strokeWidth="0.8" strokeOpacity="0.5" />
-                    </svg>
-                  </div>
                 </div>
               </div>
 
@@ -790,7 +754,7 @@ export default function ElectronicsSection() {
                 <div
                   style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
                     gap: '1rem',
                   }}
                 >
@@ -872,12 +836,10 @@ export default function ElectronicsSection() {
                 </div>
               </div>
             </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
 
-        {/* Academic Electronics Projects */}
-        <FadeIn delay={0.25}>
-          <div style={{ marginBottom: '3rem' }}>
+          {/* Academic Electronics Projects */}
+          <FadeIn delay={0.25} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             <div
               style={{
                 display: 'flex',
@@ -892,9 +854,11 @@ export default function ElectronicsSection() {
               <div style={{ height: '1px', flex: 1, background: 'var(--color-border)' }} aria-hidden="true" />
             </div>
 
-            <VoltageDetectorCard project={academicElectronicsProject} />
-          </div>
-        </FadeIn>
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+              <VoltageDetectorCard project={academicElectronicsProject} />
+            </div>
+          </FadeIn>
+        </div>
 
         {/* Electronics Workbench */}
         <FadeIn delay={0.3}>
@@ -916,7 +880,7 @@ export default function ElectronicsSection() {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 240px), 1fr))',
                 gap: '0.75rem',
               }}
             >

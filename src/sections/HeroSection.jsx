@@ -152,14 +152,10 @@ export default function HeroSection() {
   return (
     <section
       id="home"
+      className="hero-section"
       style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
-        paddingTop: '80px',
       }}
     >
       {/* Background grid */}
@@ -191,13 +187,12 @@ export default function HeroSection() {
 
       <div className="container-max" style={{ position: 'relative', zIndex: 1 }}>
         <div
+          className="hero-grid gap-8 md:gap-12"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr',
-            gap: '3rem',
             alignItems: 'center',
           }}
-          className="hero-grid"
         >
           {/* Left: Content */}
           <div style={{ maxWidth: '700px' }}>
@@ -206,6 +201,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
+              className="mb-5 md:mb-8"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -213,7 +209,7 @@ export default function HeroSection() {
                 padding: '0.35rem 0.9rem',
                 border: '1px solid rgba(0,255,159,0.25)',
                 borderRadius: '2px',
-                marginBottom: '2rem',
+                maxWidth: '100%',
               }}
             >
               <span
@@ -223,14 +219,17 @@ export default function HeroSection() {
                   borderRadius: '50%',
                   background: 'var(--color-accent)',
                   animation: 'pulse-accent 2s infinite',
+                  flexShrink: 0,
                 }}
               />
               <span
                 style={{
                   fontFamily: 'var(--font-mono)',
-                  fontSize: '0.65rem',
-                  letterSpacing: '0.14em',
+                  fontSize: 'clamp(0.58rem, 2.5vw, 0.65rem)',
+                  letterSpacing: '0.12em',
                   color: 'var(--color-accent)',
+                  lineHeight: 1.4,
+                  wordBreak: 'break-word',
                 }}
               >
                 {personal.availability}
@@ -283,12 +282,12 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.55 }}
+              className="mb-4 md:mb-6"
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: '0.75rem',
                 letterSpacing: '0.1em',
                 color: 'var(--color-text-tertiary)',
-                marginBottom: '1.5rem',
               }}
             >
               {personal.subtitle}
@@ -299,12 +298,12 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.65 }}
+              className="mb-6 md:mb-10"
               style={{
                 fontSize: '1.05rem',
                 color: 'var(--color-text-secondary)',
                 maxWidth: '520px',
                 lineHeight: 1.75,
-                marginBottom: '2.5rem',
               }}
             >
               I build practical software systems, AI-powered applications, and real-world technical projects — grounded in a foundation of electronics and hardware engineering.
@@ -341,10 +340,10 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.9 }}
+              className="mt-6 md:mt-10"
               style={{
                 display: 'flex',
                 gap: '1rem',
-                marginTop: '2.5rem',
                 alignItems: 'center',
               }}
             >
@@ -600,6 +599,7 @@ export default function HeroSection() {
           flexDirection: 'column',
           alignItems: 'center',
           gap: '0.5rem',
+          pointerEvents: 'none',
         }}
         aria-hidden="true"
       >
@@ -627,6 +627,7 @@ export default function HeroSection() {
           position: 'absolute',
           bottom: '2rem',
           right: '1.5rem',
+          pointerEvents: 'none',
         }}
         aria-hidden="true"
       >
@@ -643,7 +644,20 @@ export default function HeroSection() {
       </div>
 
       <style>{`
+        .hero-section {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding-top: calc(64px + 1.5rem);
+          padding-bottom: 3rem;
+        }
         @media (min-width: 900px) {
+          .hero-section {
+            justify-content: center;
+            padding-top: 80px;
+            padding-bottom: 0;
+          }
           .hero-grid {
             grid-template-columns: 1fr 400px !important;
             align-items: center !important;
@@ -661,7 +675,7 @@ export default function HeroSection() {
           .hero-visual {
             display: flex !important;
             justify-content: center !important;
-            margin-top: 1.5rem !important;
+            margin-top: 2rem !important;
           }
           .hero-visual > div {
             max-width: 280px !important;

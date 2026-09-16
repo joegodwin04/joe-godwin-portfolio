@@ -43,6 +43,7 @@ export default function Navigation() {
   }, []);
 
   const handleNavClick = (href) => {
+    setActiveSection(href.slice(1));
     setMobileOpen(false);
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -86,14 +87,13 @@ export default function Navigation() {
               aria-label="Joe Godwin - Home"
             >
               <span style={{ color: 'var(--color-accent)' }}>JG</span>
-              <span style={{ color: 'var(--color-border)', fontSize: '0.7rem' }}>|</span>
-              <span style={{ color: 'var(--color-text-tertiary)', fontSize: '0.65rem', letterSpacing: '0.15em' }}>FULL-STACK DEV</span>
+              <span className="hidden md:inline" style={{ color: 'var(--color-border)', fontSize: '0.7rem' }}>|</span>
+              <span className="hidden md:inline" style={{ color: 'var(--color-text-tertiary)', fontSize: '0.65rem', letterSpacing: '0.15em' }}>FULL-STACK DEV</span>
             </a>
 
             {/* Desktop Links */}
             <div
-              style={{ display: 'flex', gap: '0.25rem', alignItems: 'center' }}
-              className="hidden md:flex"
+              className="nav-desktop-links hidden md:flex"
             >
               {navItems.map((item) => (
                 <a
@@ -161,7 +161,7 @@ export default function Navigation() {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden"
+              className="nav-mobile-toggle md:hidden"
               style={{
                 background: 'transparent',
                 border: '1px solid var(--color-border)',
@@ -169,9 +169,6 @@ export default function Navigation() {
                 padding: '0.5rem',
                 color: 'var(--color-text-primary)',
                 cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
               }}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
@@ -202,36 +199,42 @@ export default function Navigation() {
               zIndex: 49,
               display: 'flex',
               flexDirection: 'column',
-              padding: '5rem 2rem 2rem',
+              padding: '4.5rem 1.75rem 1.75rem',
+              overflowY: 'auto',
+              WebkitOverflowScrolling: 'touch',
             }}
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
           >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.1rem', flex: '1 0 auto' }}>
               {navItems.map((item, i) => (
                 <motion.a
                   key={item.href}
                   href={item.href}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.04, duration: 0.25 }}
+                  transition={{ delay: i * 0.03, duration: 0.2 }}
                   onClick={(e) => { e.preventDefault(); handleNavClick(item.href); }}
                   style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '1rem',
-                    padding: '1rem 0',
+                    padding: '0.75rem 0',
                     borderBottom: '1px solid var(--color-border-subtle)',
                     textDecoration: 'none',
+                    position: 'relative',
                   }}
                 >
                   <span
                     style={{
                       fontFamily: 'var(--font-mono)',
                       fontSize: '0.65rem',
-                      color: 'var(--color-accent)',
+                      color: activeSection === item.href.slice(1)
+                        ? 'var(--color-accent)'
+                        : 'var(--color-text-tertiary)',
                       minWidth: '24px',
+                      transition: 'color 0.2s ease',
                     }}
                   >
                     {item.num}
@@ -245,15 +248,29 @@ export default function Navigation() {
                       color: activeSection === item.href.slice(1)
                         ? 'var(--color-text-primary)'
                         : 'var(--color-text-secondary)',
+                      transition: 'color 0.2s ease',
                     }}
                   >
                     {item.label}
                   </span>
+                  {activeSection === item.href.slice(1) && (
+                    <motion.div
+                      layoutId="mobile-nav-indicator"
+                      style={{
+                        marginLeft: 'auto',
+                        width: '6px',
+                        height: '6px',
+                        borderRadius: '50%',
+                        background: 'var(--color-accent)',
+                        boxShadow: '0 0 8px rgba(0, 255, 159, 0.4)',
+                      }}
+                    />
+                  )}
                 </motion.a>
               ))}
             </div>
 
-            <div style={{ marginTop: 'auto' }}>
+            <div style={{ marginTop: '2rem', paddingBottom: '1rem', flexShrink: 0 }}>
               <p
                 style={{
                   fontFamily: 'var(--font-mono)',

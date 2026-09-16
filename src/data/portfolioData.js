@@ -351,6 +351,10 @@ export const electronicsProject = {
   tagline: "A solar-powered grass-cutting prototype developed as an academic engineering project.",
   description:
     "A solar-powered grass-cutting prototype developed as my Diploma final-year project. The system combines solar power harvesting, electrical components, a motor-driven cutting mechanism and a mechanical frame — exploring the integration of renewable energy with practical automation.",
+  images: [
+    "/images/solar-grass-cutter-front-clean.jpg",
+    "/images/solar-grass-cutter-hardware-clean.jpg"
+  ],
   sections: [
     {
       id: "concept",
@@ -404,6 +408,9 @@ export const academicElectronicsProject = {
   category: "Academic Electronics Project",
   domain: "Circuit Design · Prototyping · Electrical Safety",
   tagline: "Developed a non-contact voltage detection device aimed at improving safety in electrical environments.",
+  images: [
+    "/images/non-contact-voltage-detector.jpg"
+  ],
   description:
     "Developed a non-contact voltage detection device aimed at improving safety in electrical environments as part of Diploma academic coursework.",
   overview:
