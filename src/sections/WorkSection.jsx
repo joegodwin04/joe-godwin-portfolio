@@ -109,30 +109,21 @@ function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Modal Body */}
-          <div style={{ padding: '1.75rem' }}>
+          <div className="modal-body-padding">
             {/* Tagline */}
             <p
               style={{
                 fontSize: '1rem',
                 color: 'var(--color-text-secondary)',
                 lineHeight: 1.7,
-                marginBottom: '2rem',
-                paddingBottom: '1.5rem',
-                borderBottom: '1px solid var(--color-border)',
               }}
+              className="modal-desc-padding"
             >
               {project.description}
             </p>
 
             {/* Case study sections */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                gap: '1.5rem',
-                marginBottom: '2rem',
-              }}
-            >
+            <div className="modal-grid-1">
               {[
                 { label: 'PROBLEM', content: project.problem },
                 { label: 'SOLUTION', content: project.solution },
@@ -140,8 +131,8 @@ function ProjectModal({ project, onClose }) {
               ].map((item) => (
                 <div
                   key={item.label}
+                  className="modal-item-padding"
                   style={{
-                    padding: '1.25rem',
                     border: '1px solid var(--color-border)',
                     borderRadius: '3px',
                     background: 'rgba(7,7,9,0.4)',
@@ -224,17 +215,10 @@ function ProjectModal({ project, onClose }) {
             </div>
 
             {/* Challenges + Outcome */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-                gap: '1rem',
-                marginBottom: '2rem',
-              }}
-            >
+            <div className="modal-grid-2">
               <div
+                className="modal-item-padding"
                 style={{
-                  padding: '1.25rem',
                   border: '1px solid var(--color-border)',
                   borderRadius: '3px',
                   background: 'rgba(7,7,9,0.4)',
@@ -269,8 +253,8 @@ function ProjectModal({ project, onClose }) {
                 </ul>
               </div>
               <div
+                className="modal-item-padding"
                 style={{
-                  padding: '1.25rem',
                   border: `1px solid rgba(${hexToRgb(project.color)},0.2)`,
                   borderRadius: '3px',
                   background: `rgba(${hexToRgb(project.color)},0.04)`,
@@ -389,15 +373,9 @@ function ProjectCard({ project, index, onClick }) {
           />
         )}
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: isFeatured ? '1fr auto' : '1fr',
-            gap: '1rem',
-            alignItems: 'flex-start',
-          }}
-        >
-          <div>
+          <div className={isFeatured ? "project-card-layout featured" : "project-card-layout"}
+               style={{ gap: '1rem', alignItems: 'flex-start' }}>
+            <div>
             {/* Meta */}
             <div
               style={{
@@ -538,13 +516,7 @@ export default function WorkSection() {
             subtitle="Engineering case studies — full-stack applications, AI integrations, and real-world software systems."
           />
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-              gap: '1rem',
-            }}
-          >
+          <div className="work-grid">
             {projects.map((project, i) => (
               <ProjectCard
                 key={project.id}

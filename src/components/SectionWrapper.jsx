@@ -5,9 +5,8 @@ export function SectionWrapper({ id, children, className = '', style = {} }) {
   return (
     <section
       id={id}
-      className={className}
+      className={`section-wrapper-padding ${className}`}
       style={{
-        padding: '7rem 0',
         position: 'relative',
         ...style,
       }}
@@ -27,8 +26,8 @@ export function SectionHeader({ num, label, title, subtitle, center = false }) {
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="section-header-margin"
       style={{
-        marginBottom: '4rem',
         textAlign: center ? 'center' : 'left',
       }}
     >

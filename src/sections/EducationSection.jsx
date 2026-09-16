@@ -13,13 +13,7 @@ export default function EducationSection() {
           subtitle="Two programmes — one in hardware, one in software — that together define my engineering perspective."
         />
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '1.25rem',
-          }}
-        >
+        <div className="education-grid">
           {education.map((edu, i) => {
             const isActive = edu.id === 'be-it';
             const accentColor = isActive ? 'var(--color-accent)' : '#f97316';
