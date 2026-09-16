@@ -238,7 +238,7 @@ export const education = [
     ],
   },
   {
-    id: "diploma-et",
+    id: "diploma-extc",
     degree: "Diploma in Electronics & Telecommunications",
     institution: "St. Xavier's Technical Institute, Mahim",
     location: "Mumbai, India",
@@ -259,10 +259,10 @@ export const education = [
   },
   {
     id: "ssc",
-    degree: "Higher Secondary Certificate",
+    degree: "Secondary School Certificate",
     institution: "St. Joseph's High School, Wadala",
     location: "Mumbai, India",
-    period: "Completed 2022",
+    period: " 2012 - 2022",
     status: "Completed · 2022",
     percentage: "61%",
     logo: "/images/stjoseph_logo.jpg",
@@ -291,7 +291,7 @@ export const journey = [
   },
   {
     id: "solar",
-    year: "2022 – 2023",
+    year: "2023 – 2024",
     phase: "ENGINEERING",
     title: "Solar Grass Cutter — Diploma Final Project",
     description:
@@ -300,7 +300,7 @@ export const journey = [
   },
   {
     id: "transition",
-    year: "2024 - 2025",
+    year: "2025",
     phase: "TRANSITION",
     title: "From Hardware to Software",
     description:
