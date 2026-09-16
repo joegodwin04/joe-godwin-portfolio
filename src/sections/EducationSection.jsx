@@ -73,30 +73,66 @@ export default function EducationSection() {
                       </span>
                     </div>
 
-                    {/* Degree */}
-                    <h3
-                      style={{
-                        fontFamily: 'var(--font-display)',
-                        fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
-                        fontWeight: 800,
-                        color: 'var(--color-text-primary)',
-                        marginBottom: '0.5rem',
-                        lineHeight: 1.2,
-                      }}
-                    >
-                      {edu.degree}
-                    </h3>
+                    {/* Degree + Logo row */}
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '0.5rem' }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        {/* Degree */}
+                        <h3
+                          style={{
+                            fontFamily: 'var(--font-display)',
+                            fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
+                            fontWeight: 800,
+                            color: 'var(--color-text-primary)',
+                            marginBottom: '0.5rem',
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          {edu.degree}
+                        </h3>
 
-                    {/* Institution */}
-                    <p
-                      style={{
-                        fontSize: '0.9rem',
-                        color: 'var(--color-text-secondary)',
-                        marginBottom: '0.25rem',
-                      }}
-                    >
-                      {edu.institution}
-                    </p>
+                        {/* Institution */}
+                        <p
+                          style={{
+                            fontSize: '0.9rem',
+                            color: 'var(--color-text-secondary)',
+                            marginBottom: '0.25rem',
+                          }}
+                        >
+                          {edu.institution}
+                        </p>
+                      </div>
+
+                      {/* Institution Logo */}
+                      {edu.logo && (
+                        <div
+                          style={{
+                            flexShrink: 0,
+                            width: '60px',
+                            height: '60px',
+                            borderRadius: '6px',
+                            background: 'rgba(255,255,255,0.06)',
+                            border: `1px solid rgba(${accentRgb},0.18)`,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '5px',
+                            overflow: 'hidden',
+                          }}
+                          aria-hidden="true"
+                        >
+                          <img
+                            src={edu.logo}
+                            alt={edu.logoAlt}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'contain',
+                              display: 'block',
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
 
                     <div
                       style={{

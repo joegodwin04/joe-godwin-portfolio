@@ -222,10 +222,12 @@ export const education = [
   {
     id: "be-it",
     degree: "B.E. Information Technology",
-    institution: "REPLACE: Your University Name",
+    institution: "Don Bosco Institute of Technology, Mumbai",
     location: "Mumbai, India",
-    period: "2023 – Present",
+    period: "2026 – Present",
     status: "Currently Pursuing — 3rd Year",
+    logo: "/images/dbit_logo.jpg",
+    logoAlt: "Don Bosco Institute of Technology Logo",
     description:
       "Pursuing a Bachelor of Engineering in Information Technology with focus on software development, databases, web technologies and software engineering principles.",
     highlights: [
@@ -238,10 +240,12 @@ export const education = [
   {
     id: "diploma-et",
     degree: "Diploma in Electronics & Telecommunications",
-    institution: "REPLACE: Your Polytechnic Name",
+    institution: "St. Xavier's Technical Institute, Mahim",
     location: "Mumbai, India",
-    period: "2020 – 2023",
+    period: "2020 – 2024",
     status: "Completed",
+    logo: "/images/xtech_logo.jpg",
+    logoAlt: "St. Xavier's Technical Institute Logo",
     description:
       "Three-year diploma providing hands-on exposure to electronics fundamentals, circuit theory, telecommunications, sensors, prototyping and technical drawing. Completed final-year project: Solar Grass Cutter.",
     highlights: [
@@ -257,7 +261,7 @@ export const education = [
 export const journey = [
   {
     id: "diploma",
-    year: "2020",
+    year: "2022",
     phase: "ELECTRONICS",
     title: "Diploma in Electronics & Telecommunications",
     description: "Began with a strong foundation in electronics — circuits, components, sensors and physical systems.",
@@ -265,7 +269,7 @@ export const journey = [
   },
   {
     id: "hardware",
-    year: "2021",
+    year: "2024",
     phase: "HARDWARE",
     title: "Hands-On Hardware Experience",
     description: "Practical exposure to electronic components, prototyping, hardware troubleshooting and technical systems.",
@@ -282,7 +286,7 @@ export const journey = [
   },
   {
     id: "transition",
-    year: "2023",
+    year: "2024 - 2025",
     phase: "TRANSITION",
     title: "From Hardware to Software",
     description:
@@ -291,7 +295,7 @@ export const journey = [
   },
   {
     id: "programming",
-    year: "2023",
+    year: "2025",
     phase: "PROGRAMMING",
     title: "Learning to Program",
     description: "Learned Java and JavaScript. Built first web projects. Understood the logic of code from a systems perspective.",
@@ -299,7 +303,7 @@ export const journey = [
   },
   {
     id: "fullstack",
-    year: "2024",
+    year: "2026",
     phase: "FULL-STACK",
     title: "Full-Stack Development",
     description:
@@ -308,7 +312,7 @@ export const journey = [
   },
   {
     id: "ai",
-    year: "2024 – 2025",
+    year: "2026 – 2027",
     phase: "AI",
     title: "AI-Powered Projects",
     description:
@@ -317,7 +321,7 @@ export const journey = [
   },
   {
     id: "be",
-    year: "2023 – Present",
+    year: "2026 – Present",
     phase: "B.E. IT",
     title: "B.E. Information Technology",
     description: "Currently in 3rd year. Building production-grade projects and preparing for software development opportunities.",
