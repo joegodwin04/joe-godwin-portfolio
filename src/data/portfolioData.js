@@ -224,8 +224,8 @@ export const education = [
     degree: "B.E. Information Technology",
     institution: "Don Bosco Institute of Technology, Mumbai",
     location: "Mumbai, India",
-    period: "2026 – Present",
-    status: "Currently Pursuing — 3rd Year",
+    period: "2025 – Present",
+    status: "Currently Pursuing · 3rd Year",
     logo: "/images/dbit_logo.jpg",
     logoAlt: "Don Bosco Institute of Technology Logo",
     description:
@@ -242,8 +242,9 @@ export const education = [
     degree: "Diploma in Electronics & Telecommunications",
     institution: "St. Xavier's Technical Institute, Mahim",
     location: "Mumbai, India",
-    period: "2020 – 2024",
-    status: "Completed",
+    period: "2022 – 2025",
+    status: "Completed · 2025",
+    percentage: "76% · Distinction",
     logo: "/images/xtech_logo.jpg",
     logoAlt: "St. Xavier's Technical Institute Logo",
     description:
@@ -255,6 +256,19 @@ export const education = [
       "Technical drawing and documentation",
       "Final-year project: Solar Grass Cutter",
     ],
+  },
+  {
+    id: "ssc",
+    degree: "SSC",
+    institution: "St. Joseph's High School, Wadala",
+    location: "Mumbai, India",
+    period: "Completed 2022",
+    status: "Completed · 2022",
+    percentage: "61%",
+    logo: "/images/stjoseph_logo.jpg",
+    logoAlt: "St. Joseph's High School Logo",
+    description: "Completed secondary education with a focus on foundational academics.",
+    highlights: [],
   },
 ];
 

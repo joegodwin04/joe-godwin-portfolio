@@ -71,6 +71,21 @@ export default function EducationSection() {
                       >
                         {edu.status.toUpperCase()}
                       </span>
+                      {edu.percentage && (
+                        <>
+                          <span style={{ color: 'var(--color-text-tertiary)', fontSize: '0.6rem' }}>|</span>
+                          <span
+                            style={{
+                              fontFamily: 'var(--font-mono)',
+                              fontSize: '0.6rem',
+                              letterSpacing: '0.14em',
+                              color: 'var(--color-text-secondary)',
+                            }}
+                          >
+                            {edu.percentage.toUpperCase()}
+                          </span>
+                        </>
+                      )}
                     </div>
 
                     {/* Degree + Logo row */}
@@ -176,36 +191,38 @@ export default function EducationSection() {
                     </p>
 
                     {/* Highlights */}
-                    <div>
-                      <p
-                        style={{
-                          fontFamily: 'var(--font-mono)',
-                          fontSize: '0.58rem',
-                          letterSpacing: '0.14em',
-                          color: 'var(--color-text-tertiary)',
-                          marginBottom: '0.5rem',
-                        }}
-                      >
-                        HIGHLIGHTS
-                      </p>
-                      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
-                        {edu.highlights.map((h) => (
-                          <li
-                            key={h}
-                            style={{
-                              display: 'flex',
-                              alignItems: 'flex-start',
-                              gap: '0.5rem',
-                              fontSize: '0.8rem',
-                              color: 'var(--color-text-secondary)',
-                            }}
-                          >
-                            <span style={{ color: accentColor, flexShrink: 0, fontSize: '0.6rem', marginTop: '0.3rem' }}>▸</span>
-                            {h}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {edu.highlights && edu.highlights.length > 0 && (
+                      <div>
+                        <p
+                          style={{
+                            fontFamily: 'var(--font-mono)',
+                            fontSize: '0.58rem',
+                            letterSpacing: '0.14em',
+                            color: 'var(--color-text-tertiary)',
+                            marginBottom: '0.5rem',
+                          }}
+                        >
+                          HIGHLIGHTS
+                        </p>
+                        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                          {edu.highlights.map((h) => (
+                            <li
+                              key={h}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'flex-start',
+                                gap: '0.5rem',
+                                fontSize: '0.8rem',
+                                color: 'var(--color-text-secondary)',
+                              }}
+                            >
+                              <span style={{ color: accentColor, flexShrink: 0, fontSize: '0.6rem', marginTop: '0.3rem' }}>▸</span>
+                              {h}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               </FadeIn>
@@ -213,29 +230,7 @@ export default function EducationSection() {
           })}
         </div>
 
-        {/* Note */}
-        <FadeIn delay={0.3}>
-          <div
-            style={{
-              marginTop: '2rem',
-              padding: '0.75rem 1rem',
-              border: '1px solid var(--color-border)',
-              borderRadius: '3px',
-              background: 'rgba(17,17,22,0.4)',
-            }}
-          >
-            <p
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.62rem',
-                letterSpacing: '0.08em',
-                color: 'var(--color-text-tertiary)',
-              }}
-            >
-              NOTE — INSTITUTION NAMES AND DETAILS ARE PLACEHOLDERS. UPDATE portfolioData.js WITH ACTUAL INFORMATION.
-            </p>
-          </div>
-        </FadeIn>
+
       </div>
     </SectionWrapper>
   );
