@@ -23,6 +23,9 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- THREE.js must load and set window.THREE BEFORE Vanta evaluates -->
+    <script src="/three.min.js"></script>
+    <script src="/vanta.net.min.js"></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

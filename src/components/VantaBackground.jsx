@@ -1,76 +1,75 @@
-import React, { useEffect, useRef, useState } from 'react';
-import * as THREE from 'three';
+import { useEffect, useRef } from 'react';
 
+/**
+ * VantaBackground
+ *
+ * THREE.js (0.121.1) and vanta.net.min.js (0.5.24) are loaded as synchronous
+ * <script> tags in index.html, BEFORE this React module evaluates.
+ *
+ * This guarantees window.THREE is set when vanta.net.min.js evaluates its
+ * module-level `let p = window.THREE` capture.
+ *
+ * window.VANTA.NET is available synchronously here because of the script tags.
+ */
 const VantaBackground = () => {
   const vantaRef = useRef(null);
-  const [vantaEffect, setVantaEffect] = useState(null);
+  const vantaInstance = useRef(null);
 
   useEffect(() => {
-    let vantaEffectInstance = null;
-    let isMounted = true;
+    const el = vantaRef.current;
+    if (!el) return;
 
-    const initVanta = async () => {
-      try {
-        if (!vantaEffect && vantaRef.current) {
-          // 1. MUST set THREE globally BEFORE Vanta evaluates
-          if (!window.THREE) {
-            window.THREE = THREE;
-          }
+    // Guard: don't double-initialise (handles React Strict Mode double-invoke)
+    if (vantaInstance.current) return;
 
-          // 2. Dynamically import Vanta so it sees window.THREE during evaluation
-          const vantaModule = await import('vanta/dist/vanta.net.min');
-          const NET = vantaModule.default || window?.VANTA?.NET;
-          
-          if (typeof NET === 'function' && isMounted) {
-            vantaEffectInstance = NET({
-              el: vantaRef.current,
-              THREE: THREE,
-              color: 0x00ff66,
-              backgroundColor: 0x05070a,
-              points: 10,
-              maxDistance: 20,
-              spacing: 15,
-              showDots: true,
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200,
-              minWidth: 200,
-              scale: 1,
-              scaleMobile: 1
-            });
-            setVantaEffect(vantaEffectInstance);
-          }
-        }
-      } catch (error) {
-        console.error("Vanta runtime error:", error);
-      }
-    };
+    const NET = window?.VANTA?.NET;
 
-    initVanta();
+    if (typeof NET !== 'function') {
+      console.warn('[VantaBackground] window.VANTA.NET is not a function. Check /vanta.net.min.js loaded.');
+      return;
+    }
+
+    try {
+      vantaInstance.current = NET({
+        el,
+        THREE: window.THREE,
+        color: 0x00FF66,
+        backgroundColor: 0x05070A,
+        backgroundAlpha: 1,
+        points: 10,
+        maxDistance: 20,
+        spacing: 15,
+        showDots: true,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200,
+        minWidth: 200,
+        scale: 1,
+        scaleMobile: 1,
+      });
+      console.log('[VantaBackground] NET initialized:', vantaInstance.current);
+    } catch (err) {
+      console.error('[VantaBackground] NET() init error:', err);
+    }
 
     return () => {
-      isMounted = false;
-      if (vantaEffectInstance) {
+      if (vantaInstance.current) {
         try {
-          vantaEffectInstance.destroy();
+          vantaInstance.current.destroy();
         } catch (e) {
-          console.error("Error destroying Vanta:", e);
+          console.error('[VantaBackground] destroy error:', e);
         }
-      } else if (vantaEffect) {
-        try {
-          vantaEffect.destroy();
-        } catch (e) {
-          console.error("Error destroying Vanta:", e);
-        }
+        vantaInstance.current = null;
       }
     };
-  }, [vantaEffect]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div
       ref={vantaRef}
-      className="vanta-background"
+      aria-hidden="true"
       style={{
         position: 'fixed',
         top: 0,
@@ -80,7 +79,7 @@ const VantaBackground = () => {
         zIndex: 0,
         pointerEvents: 'none',
         overflow: 'hidden',
-        backgroundColor: '#05070a' // Fallback if Vanta fails
+        backgroundColor: '#05070a',
       }}
     />
   );
