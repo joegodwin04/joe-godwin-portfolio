@@ -267,8 +267,14 @@ export const education = [
     percentage: "61%",
     logo: "/images/stjoseph_logo.jpg",
     logoAlt: "St. Joseph's High School Logo",
-    description: "Completed secondary education with a focus on foundational academics.",
-    highlights: [],
+    description:
+      "Completed secondary school education with a foundational academic background that supported further studies in electronics and information technology.",
+    highlights: [
+      "Academic foundation",
+      "Core school education",
+      "Communication and learning skills",
+      "Preparation for higher education",
+    ],
   },
 ];
 

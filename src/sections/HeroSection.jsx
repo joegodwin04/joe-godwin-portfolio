@@ -340,10 +340,10 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className="mt-10 md:mt-14"
+              className="mt-6 md:mt-10"
               style={{
                 display: 'flex',
-                gap: '1rem',
+                gap: '1.25rem',
                 alignItems: 'center',
                 flexWrap: 'wrap',
               }}

@@ -61,7 +61,7 @@ export default function ContactSection() {
   return (
     <SectionWrapper
       id="contact"
-      className="dot-grid"
+      className="dot-grid !pb-12 md:!pb-16"
       style={{ background: 'var(--color-bg-secondary)' }}
     >
       <div className="container-max">

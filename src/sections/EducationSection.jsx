@@ -98,6 +98,7 @@ export default function EducationSection() {
                             marginBottom: '0.5rem',
                             lineHeight: 1.2,
                             textWrap: 'balance',
+                            wordBreak: 'break-word',
                           }}
                         >
                           {edu.degree}

@@ -54,6 +54,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  scroll-margin-top: 80px;
+}
+
 #root { overflow-x: hidden; }
 
 /* =============================================

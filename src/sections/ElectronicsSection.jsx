@@ -724,18 +724,18 @@ export default function ElectronicsSection() {
 
                     {/* Image Gallery */}
                     {electronicsProject.images && (
-                      <div className="flex flex-col gap-6 mb-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                         {/* Primary Image */}
                         <div 
-                          className="w-full overflow-hidden rounded-md border border-[#f97316]/20 bg-[#f97316]/5 cursor-pointer relative group shadow-lg"
+                          className="w-full overflow-hidden rounded-md border border-[#f97316]/20 bg-[#f97316]/5 cursor-pointer relative group shadow-lg aspect-[4/3]"
                           onClick={() => window.open(electronicsProject.images[0], '_blank')}
                           title="Click to view full size"
                         >
                           <img
                             src={electronicsProject.images[0]}
                             alt={`${electronicsProject.name} Primary View`}
-                            className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            style={{ display: 'block', maxHeight: '420px' }}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            style={{ display: 'block' }}
                           />
                           <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
                           <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-2 rounded pointer-events-none border border-[#f97316]/30">
@@ -746,15 +746,15 @@ export default function ElectronicsSection() {
                         {/* Secondary Image */}
                         {electronicsProject.images.length > 1 && (
                           <div 
-                            className="w-full md:w-3/4 overflow-hidden rounded-md border border-[#f97316]/20 bg-[#f97316]/5 cursor-pointer relative group shadow-lg"
+                            className="w-full overflow-hidden rounded-md border border-[#f97316]/20 bg-[#f97316]/5 cursor-pointer relative group shadow-lg aspect-[4/3]"
                             onClick={() => window.open(electronicsProject.images[1], '_blank')}
                             title="Click to view full size"
                           >
                             <img
                               src={electronicsProject.images[1]}
                               alt={`${electronicsProject.name} Secondary View`}
-                              className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                              style={{ display: 'block', maxHeight: '320px' }}
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                              style={{ display: 'block' }}
                             />
                             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
                             <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-2 rounded pointer-events-none border border-[#f97316]/30">
@@ -917,32 +917,32 @@ export default function ElectronicsSection() {
                     background: 'rgba(17,17,22,0.5)',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
-                    <h4
-                      style={{
-                        fontSize: '0.88rem',
-                        fontWeight: 500,
-                        color: 'var(--color-text-primary)',
-                        flex: 1,
-                      }}
-                    >
-                      {item.title}
-                    </h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '0.8rem' }}>
                     <span
                       style={{
                         fontFamily: 'var(--font-mono)',
                         fontSize: '0.58rem',
                         letterSpacing: '0.08em',
                         color: '#f97316',
-                        padding: '0.1rem 0.4rem',
+                        padding: '0.15rem 0.45rem',
                         border: '1px solid rgba(249,115,22,0.25)',
                         borderRadius: '2px',
                         background: 'rgba(249,115,22,0.05)',
-                        flexShrink: 0,
+                        alignSelf: 'flex-start',
                       }}
                     >
                       {item.type.toUpperCase()}
                     </span>
+                    <h4
+                      style={{
+                        fontSize: '0.95rem',
+                        fontWeight: 600,
+                        color: 'var(--color-text-primary)',
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      {item.title}
+                    </h4>
                   </div>
                   <p
                     style={{
